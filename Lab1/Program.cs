@@ -522,20 +522,23 @@ namespace Lab1
         public static void Dbg2()
         {
             V3MainCollection clct = new V3MainCollection();
+            DateTime tm = DateTime.UtcNow;
             V3DataList c1 = new V3DataList("ID_3", DateTime.Now);
-            V3DataList c2 = new V3DataList("ID_4", DateTime.UtcNow);
+            V3DataList c2 = new V3DataList("ID_4", tm);
             V3DataList c3 = new V3DataList("ID_5", DateTime.Now);
-            DataItem dt1 = new DataItem(0.0, 1.0, Methods.F2(0.0, 1.0));
+            DataItem dt1 = new DataItem(1.0, 1.0, Methods.F2(0.0, 1.0));
             DataItem dt2 = new DataItem(0.0, 1.0, Methods.F2(0.0, 2.0));
-            DataItem dt3 = new DataItem(1.0, 1.0, Methods.F2(1.0, 1.0));
+            DataItem dt3 = new DataItem(2.0, 1.0, Methods.F2(1.0, 1.0));
             c1.Add(dt1);
             c2.Add(dt2);
             c2.Add(dt3);
             clct.Add(c1);
             clct.Add(c2);
             clct.Add(c3);
-            V3DataArray a = new V3DataArray("ID_1", DateTime.Now, 0, 0, 1, 1, Methods.F1);
+            V3DataArray a = new V3DataArray("ID_1", tm, 2, 1, 1, 1, Methods.F1);
+            V3DataArray a2 = new V3DataArray("ID_2", DateTime.Now, 2, 2, 1, 1, Methods.F1);
             clct.Add(a);
+            clct.Add(a2);
             Console.WriteLine(clct.ToLongString("F3"));
             Console.WriteLine("");
 
