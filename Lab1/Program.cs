@@ -139,7 +139,6 @@ namespace Lab1
         {
             FileStream fs = null;
             CultureInfo cInfo = new CultureInfo("ru-RU");
-            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.OpenOrCreate);
@@ -172,7 +171,6 @@ namespace Lab1
         {
             FileStream fs = null;
             CultureInfo cInfo = new CultureInfo("ru-RU");
-            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.Open);
@@ -308,7 +306,6 @@ namespace Lab1
         {
             FileStream fs = null;
             CultureInfo cInfo = new CultureInfo("ru-RU");
-            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.OpenOrCreate);
@@ -345,7 +342,6 @@ namespace Lab1
         {
             FileStream fs = null;
             CultureInfo cInfo = new CultureInfo("ru-RU");
-            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.Open);
