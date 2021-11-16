@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.IO;
+using System.Globalization;
 
 namespace Lab1
 {
@@ -137,6 +138,8 @@ namespace Lab1
         public bool SaveBinary(string filename)
         {
             FileStream fs = null;
+            CultureInfo cInfo = new CultureInfo("ru-RU");
+            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.OpenOrCreate);
@@ -168,6 +171,8 @@ namespace Lab1
         static public bool LoadBinary(string filename, ref V3DataList v3)
         {
             FileStream fs = null;
+            CultureInfo cInfo = new CultureInfo("ru-RU");
+            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.Open);
@@ -302,6 +307,8 @@ namespace Lab1
         public bool SaveAsText(string filename)
         {
             FileStream fs = null;
+            CultureInfo cInfo = new CultureInfo("ru-RU");
+            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.OpenOrCreate);
@@ -337,6 +344,8 @@ namespace Lab1
         static public bool LoadAsText(string filename, ref V3DataArray v3)
         {
             FileStream fs = null;
+            CultureInfo cInfo = new CultureInfo("ru-RU");
+            cInfo.NumberFormat.NumberDecimalSeparator = ",";
             try
             {
                 fs = new FileStream(filename, FileMode.Open);
